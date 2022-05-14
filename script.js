@@ -19,10 +19,10 @@ function fillInAddress() {
 
 var clientID= "nkyJu8Y-bgOpyEvKdevXhji09H6_azi1OlFzFM9W0-Y";
 
-window.addEventListener('load', loadImage(place));
+window.addEventListener('load', loadImage(autocomplete));
 
-function loadImage(place) {
-  var cityUrl = "https://api.unsplash.com/search/photos?query=" + place + "&page=1&per_page=1&client_id=" + clientID;
+function loadImage(autocomplete) {
+  var cityUrl = "https://api.unsplash.com/search/photos?query=" + autocomplete + "&page=1&per_page=1&client_id=" + clientID;
   console.log(cityUrl);
   var imageEl = document.querySelector('.image');
     fetch(cityUrl)
@@ -42,13 +42,13 @@ const wikiUsername = "arparent";  //Required for API - registered username for A
 var cityNameText = document.getElementById('city-name-text');       //Todo - Create this element in HTML.
 var wikiText = document.getElementById('wiki-text');                //Todo - Create this element in HTML.
 
-function getWikiApi(place) {                         //Takes the city name and returns a matching summary from Wikipedia.
+function getWikiApi(autocomplete) {                         //Takes the city name and returns a matching summary from Wikipedia.
     cityNameText.textContent = cityName;                //Display the city name on the page without alteration.
-    cityNameArr = place.split(" ");                  //Parse out any spaces in the city name - they cannot be in the URL.
+    cityNameArr = autocomplete.split(" ");                  //Parse out any spaces in the city name - they cannot be in the URL.
     wikiCityName = "";                                  //Creates a string for city name in the URL.
     for (var i = 0; i < cityNameArr.length; i++){       //Re-assembles the city name string, replacing spaces with "%20".
-        wikiCityName.concat(placeArr[i]);
-        if((i + 1) < placeArr.length)
+        wikiCityName.concat(autocompleteArr[i]);
+        if((i + 1) < autocompleteArr.length)
             wikiCityName.concat("%20");
         else
             break;
