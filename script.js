@@ -85,7 +85,7 @@ function loadImage(cityName) {
         })
         .then(function(data) {
             var imageElement = document.querySelector('#showimage');
-            imageElement.src=data.results[0].urls.thumb;
+            imageElement.src=data.results[0].url.thumb;
         });
 
 }
