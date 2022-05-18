@@ -70,7 +70,7 @@ function initAutocomplete() {
 
 window.initAutocomplete = initAutocomplete;
 
-cityName=document.getElementsByTagName("input")[0].value
+var cityName=document.getElementsByTagName("input")[0].value
 // var cityName="seattle"; //get from input
 var clientID= "nkyJu8Y-bgOpyEvKdevXhji09H6_azi1OlFzFM9W0-Y";
 
