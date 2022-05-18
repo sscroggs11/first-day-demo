@@ -70,25 +70,25 @@ function initAutocomplete() {
 
 window.initAutocomplete = initAutocomplete;
 
-var cityName=document.getElementsByTagName("input")[0].value
-// var cityName="seattle"; //get from input
-var clientID= "nkyJu8Y-bgOpyEvKdevXhji09H6_azi1OlFzFM9W0-Y";
+// var cityName=document.getElementsByTagName("input")[0].value
+// // var cityName="seattle"; //get from input
+// var clientID= "nkyJu8Y-bgOpyEvKdevXhji09H6_azi1OlFzFM9W0-Y";
 
-window.addEventListener('load', loadImage(cityName));
+// window.addEventListener('load', loadImage(cityName));
 
-function loadImage(cityName) {
-  var cityUrl = "https://api.unsplash.com/search/photos?query=" + cityName + "&page=1&per_page=1&client_id=" + clientID;
-  console.log(cityUrl);
-    fetch(cityUrl)
-        .then(function (response){
-            return response.json();
-        })
-        .then(function(data) {
-            var imageElement = document.querySelector('#showimage');
-            imageElement.src=data.results[0].url.thumb;
-        });
+// function loadImage(cityName) {
+//   var cityUrl = "https://api.unsplash.com/search/photos?query=" + cityName + "&page=1&per_page=1&client_id=" + clientID;
+//   console.log(cityUrl);
+//     fetch(cityUrl)
+//         .then(function (response){
+//             return response.json();
+//         })
+//         .then(function(data) {
+//             var imageElement = document.querySelector('#showimage');
+//             imageElement.src=data.results[0].url.thumb;
+//         });
 
-}
+// }
 
 // var cityName = "";  //To be pulled from either input or Sam's API after validation - should be pre-trimmed
 const wikiUsername = "arparent";  //Required for API - registered username for Adam Parent.
