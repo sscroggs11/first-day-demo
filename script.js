@@ -73,10 +73,10 @@ window.initAutocomplete = initAutocomplete;
 // var cityName="seattle"; //get from input
 var clientID= "nkyJu8Y-bgOpyEvKdevXhji09H6_azi1OlFzFM9W0-Y";
 
-window.addEventListener('load', loadImage(place.name));
+window.addEventListener('load', loadImage(places));
 
-function loadImage(place.name) {
-  var cityUrl = "https://api.unsplash.com/search/photos?query=" + place.name + "&page=1&per_page=1&client_id=" + clientID;
+function loadImage(places) {
+  var cityUrl = "https://api.unsplash.com/search/photos?query=" + places + "&page=1&per_page=1&client_id=" + clientID;
   console.log(cityUrl);
     fetch(cityUrl)
         .then(function (response){
@@ -94,13 +94,13 @@ const wikiUsername = "arparent";  //Required for API - registered username for A
 var cityNameText = document.getElementById('city-name-text');       //Todo - Create this element in HTML.
 var wikiText = document.getElementById('wiki-text');                //Todo - Create this element in HTML.
 
-function getWikiApi(place.name) {                         //Takes the city name and returns a matching summary from Wikipedia.
-    cityNameText.textContent = place.name;                //Display the city name on the page without alteration.
-    cityNameArr = place.name.split(" ");                  //Parse out any spaces in the city name - they cannot be in the URL.
+function getWikiApi(places) {                         //Takes the city name and returns a matching summary from Wikipedia.
+    cityNameText.textContent = places;                //Display the city name on the page without alteration.
+    cityNameArr = places.split(" ");                  //Parse out any spaces in the city name - they cannot be in the URL.
     wikiCityName = "";                                  //Creates a string for city name in the URL.
-    for (var i = 0; i < place.nameArr.length; i++){       //Re-assembles the city name string, replacing spaces with "%20".
-        wikiCityName.concat(place.nameArr[i]);
-        if((i + 1) < place.nameArr.length)
+    for (var i = 0; i < placesArr.length; i++){       //Re-assembles the city name string, replacing spaces with "%20".
+        wikiCityName.concat(placesArr[i]);
+        if((i + 1) < placesArr.length)
             wikiCityName.concat("%20");
         else
             break;
