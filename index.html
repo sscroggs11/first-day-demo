@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map</title>
-<!--     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj60xSlwjTCulTpFV4vzN_dU2Aq32B308&libraries=places"></script> -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets2/Style.css">
+
 </head>
 <body>
     <header>
@@ -16,9 +16,9 @@
             <h1>City Scan</h1>
         </nav>
     </header> 
-    <div id="InputBox">
+    <div id="InputBox" class="col">
         <img id="IMGSEA" src="https://images.squarespace-cdn.com/content/v1/5c2d06bd8f51304e8d79dfa0/1552854565809-S5SA1QF5VU3NGJ6NWRZP/Seattle+Skyline.jpg?format=2500w" alt="Map of Seattle">
-        <input type="search" placeholder="Search" id="Searchbox pac-input"class="controls">
+        <input type="text" placeholder="Search" id="pac-input"class="controls">
                 <button type="submit"
                     id="search-button">Search</button>
         </input>      
@@ -38,7 +38,9 @@
             </div>
         </div>
     </div>
+    <div class="pac-card" id="pac-card">
     <div id="map" ></div>         
+    </div>
     <script src="./wikiapi.js"></script>
     <script src="./image_script.js"></script>
     <script src="./maps_script.js"></script>
