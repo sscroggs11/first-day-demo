@@ -18,11 +18,12 @@
     </header> 
     <div id="InputBox" class="col">
         <img id="IMGSEA" src="https://images.squarespace-cdn.com/content/v1/5c2d06bd8f51304e8d79dfa0/1552854565809-S5SA1QF5VU3NGJ6NWRZP/Seattle+Skyline.jpg?format=2500w" alt="Map of Seattle">
-        <input type="text" placeholder="Search" id="pac-input"class="controls">
-                <button type="submit"
-                    id="search-button">Search</button>
-        </input>      
-    </div>
+        <div class="pac-card" id="pac-card">
+            <input type="text" placeholder="Search" id="pac-input"class="controls">
+                    <button type="submit"
+                        id="search-button">Search</button>
+            </input>      
+        </div>
     <div class="parent">
         <div class="row">
             <div class="col">
@@ -38,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="pac-card" id="pac-card">
+   
     <div id="map" ></div>         
     </div>
     <script src="./wikiapi.js"></script>
