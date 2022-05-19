@@ -29,7 +29,8 @@ h1 {
 #IMGSEA{
     display: inline;
     height: 250px;
-    width: max-content;
+    width: fit-content;
+
 }
 #InputBox{
     display: flex;
@@ -41,7 +42,7 @@ h1 {
 
 input{
     width: 230px;
-    height: 80px;
+    height: 28px;
     display: inline-block;
 }
 #search-button{
@@ -74,5 +75,5 @@ img #showimage{
 
 #map{
     height:500px;
-    width:2060px
+    width:100%
 }
