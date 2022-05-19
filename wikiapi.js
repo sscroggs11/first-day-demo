@@ -17,7 +17,9 @@ function getWikiApi(cityName) {                         //Takes the city name an
             break;
     }
     var wikiApiURL = "https://api.geonames.org/wikipediaSearchJSON?q=" + wikiCityName + "&maxRows=1&username=" + wikiUsername;   //Build the URL
-    fetch(wikiApiURL)
+    fetch(wikiApiURL),  {
+        mode: 'no-cors'
+    }
       .then(function (response) {
         if (response.status < 200 || response.status >= 400) {                  //Check Status - if not in 300 range, return error message.
           wikiText.textContent = "Response Error Code: " + response.status;     //Todo - See if API returns any status messages, append if provided.
