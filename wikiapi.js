@@ -31,9 +31,13 @@ function getWikiApi(cityName) {                         //Takes the city name an
 
 getWikiApi(cityName);
 
-cityName.addEventListener.("keydown", function(e) {
+cityName.addEventListener ("keydown", function(e) {
   if (e.code === "Enter") {
-    getWikiApi(cityName);
+   validate(e);
   }
 });
+
+function validate(e) {
+    var text = e.target.value;
+}
 
