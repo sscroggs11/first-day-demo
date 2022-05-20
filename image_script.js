@@ -1,5 +1,5 @@
 /* Fetch API */
-var cityName="seattle"; //get from input
+var cityName=document.getElementsByID("pac-input").value; //get from input
 var clientID= "nkyJu8Y-bgOpyEvKdevXhji09H6_azi1OlFzFM9W0-Y";
 
 window.addEventListener('load', loadImage(cityName));
