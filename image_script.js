@@ -1,7 +1,7 @@
 /* Fetch API */
-var cityName=document.getElementByID("pac-input").value; //get from input
-var clientID= "nkyJu8Y-bgOpyEvKdevXhji09H6_azi1OlFzFM9W0-Y";
 
+var clientID= "nkyJu8Y-bgOpyEvKdevXhji09H6_azi1OlFzFM9W0-Y";
+var cityName= document.getElementById("pac-input").value;
 window.addEventListener('load', loadImage(cityName));
 
 function loadImage(cityName) {
