@@ -1,7 +1,7 @@
 /* Fetch API */
 
 var clientID= "nkyJu8Y-bgOpyEvKdevXhji09H6_azi1OlFzFM9W0-Y";
-var cityName = place.name;
+var cityName = autocomplete.getplace();
 window.addEventListener('load', loadImage(cityName));
 
 function loadImage(cityName) {
