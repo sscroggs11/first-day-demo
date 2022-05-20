@@ -1,7 +1,7 @@
 /* Fetch API */
 
 var clientID= "nkyJu8Y-bgOpyEvKdevXhji09H6_azi1OlFzFM9W0-Y";
-var cityName = data.place.name;
+var cityName =document.getElementsByTagName("input")[0].value;
 window.addEventListener('load', loadImage(cityName));
 
 function loadImage(cityName) {
